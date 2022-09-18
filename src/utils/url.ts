@@ -1,5 +1,5 @@
-const URL = "http://localhost:4000/api/070699"
-// const URL = 'https://gentlevn.com/api/070699';
+// const URL = "http://localhost:4000/api/070699"
+const URL = 'https://gentlevn.com/api/070699';
 
 
 export const ADMIN_LOGIN = `${URL}/admin/login`
