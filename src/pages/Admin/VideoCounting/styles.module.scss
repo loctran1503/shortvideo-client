@@ -1,0 +1,54 @@
+.wrapper{
+    h2{
+        margin: 30px 0;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+}
+
+.customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+   
+    td,
+    th {
+      border: 1px solid #ddd;
+      padding: 8px;
+     
+    }
+  
+    td{
+        padding: 8px;
+        video{
+            width: auto;
+            height: 100px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+    }
+  
+    tr:hover {
+      background-color: #fafafa;
+    }
+  
+    th {
+      text-align: center;
+      padding-top: 12px;
+      padding-bottom: 12px;
+  
+      font-weight: 500;
+      font-family: 'Roboto',sans-serif;
+      background-color: var(--facebook);
+      color: white;
+    }
+  }
+
+  .pagination{
+    margin: 40px 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

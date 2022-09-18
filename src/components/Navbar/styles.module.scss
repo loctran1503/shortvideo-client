@@ -1,0 +1,125 @@
+.wrapper{
+
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid var(--border-gray-less);
+    
+}
+.container{
+    height: 68px;
+    margin-bottom: 12px;
+}
+.navbar{
+    margin: 0 12px;
+    height:68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    .navbarCenter{
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        .navbarIcon{
+            cursor: pointer;
+            padding: 0 30px;
+            font-size: 1.4rem;
+            color: #333;
+        }
+       
+    }
+   
+    .suggestion{
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: rgba(230, 18, 18, 0.1) 0px 1px 2px 0px;
+        text-transform: uppercase;
+        font-family: 'Roboto',sans-serif;
+        color: #333;
+        padding: 6px 12px;
+        text-align: center;
+        border-radius: 50px;
+        border: 1px solid var(--pink);
+        color: var(--pink);
+    }
+   
+}
+
+// Category
+.categoryContainer{
+    height: 40px;
+    .textCategory{
+        text-align: center;
+        border-radius: 20px;
+       
+        border: 1px solid var(--border-gray);
+      
+        background-color: var(--border-gray-less);
+        min-width: 100px;
+        user-select: none;
+        padding: 6px 12px;
+        cursor: pointer;
+    }
+    .textCategoryActived{
+        text-align: center;
+        border-radius: 20px;
+        background-color: #333;
+        color: white;
+        font-weight: 500;
+        
+        padding: 6px 12px;
+       
+        min-width: 100px;
+        user-select: none;
+        cursor: pointer;
+    }
+}
+
+.suggestModal{
+    max-width: 500px;
+    padding: 12px;
+    h2{
+        color: red;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        font-weight: 500;
+        text-align: center;
+        font-family: 'Roboto',sans-serif;
+        font-size: 1rem;
+    }
+    .suggestModalHeader{
+        margin-bottom: 20px;
+        text-align: end;
+        .closeIcon{
+            font-size: 1.4rem;
+            color: black;
+            padding: 6px;
+            cursor: pointer;
+        }
+    }
+}
+
+.toAdmin{
+    padding: 6px 12px;
+    outline: none;
+    border-radius: 50px;
+    border: 1px solid black;
+    font-weight: 500;
+    margin: 0 30px;
+    cursor: pointer;
+    font-family: "Roboto",sans-serif;
+    background-color: white;
+}
+
+
+
+

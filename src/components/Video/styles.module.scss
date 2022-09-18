@@ -1,0 +1,72 @@
+.videoItem {
+  margin-top: 40px;
+
+  cursor: pointer;
+  border-radius: 20px;
+  .controls {
+    width: 100%;
+    .title {
+      margin: 0 0 6px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      flex: 1;
+      word-wrap: break-word;
+   
+    }
+    .titleHidden {
+      margin: 0 0 12px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      flex: 1;
+      max-width: 200px;
+      visibility: hidden;
+    }
+    .downloader {
+      text-align: end;
+      margin-bottom: 12px;
+      a {
+        cursor: pointer;
+        color: var(--text-blue);
+        margin-left: 12px;
+        text-decoration: none;
+        border-radius: 50px;
+        padding: 4px 12px;
+        background-color: var(--facebook);
+        color: white;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  video {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: black;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+.pagination{
+  margin: 30px 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.noVideo{
+  font-size: 1.5rem;
+  width: 100%;
+  font-weight: 500;
+  color: var(--text-gray);
+  text-align: center;
+  margin: 25vh 0;
+}
+
+.loadingItem{
+  height: 280px;
+  margin-top: 40px;
+}

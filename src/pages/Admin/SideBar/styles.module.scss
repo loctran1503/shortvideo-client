@@ -1,0 +1,33 @@
+.container{
+    margin-top: 40px;
+}
+.item{
+    padding: 16px;
+    border: 2px solid var(--facebook);
+    border-bottom: none;
+   
+    background-color: white;
+   
+    cursor: pointer;
+    .title{
+        font-weight: 500;
+        color: var(--facebook);
+        span{
+            margin-left: 10px;
+            padding: 4px 8px;
+            border-radius: 50%;
+            font-weight: 500;
+            font-size: 0.9rem;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+    }
+    
+    &:last-child{
+        border-bottom: 2px solid var(--facebook);
+    }
+    &:hover{
+        background-color: #fafafa;
+    }
+}

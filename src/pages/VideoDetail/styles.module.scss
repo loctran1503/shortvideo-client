@@ -1,0 +1,98 @@
+.wrapper{
+    margin: 40px 12px 0;
+}
+.container{
+    .videoTitle{
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    video{
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+    .downloader{
+        text-align: end;
+        margin: 16px 0;
+        a{
+            text-decoration: none;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 500;
+            border: 1px solid var(--facebook);
+            color: var(--facebook);
+            cursor: pointer;
+            margin-bottom: 4px;
+        }
+    }
+}
+
+.adminControl{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 32px;
+    .adminEditVideo{
+        border: 1px solid rgb(228, 134, 13);
+        color: rgb(228, 134, 13);
+        font-weight: 500;
+        padding: 6px 18px;
+        outline: none;
+        font-family: "Roboto",sans-serif;
+        margin: 0 20px;
+        background-color: white;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .adminDeleteVideo{
+        border: 1px solid var(--pink);
+        color: var(--pink);
+        font-weight: 500;
+        background-color: white;
+        padding: 6px 18px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        outline: none;
+        font-family: "Roboto",sans-serif;
+        margin: 0 20px;
+    }
+}
+.adminDeleteModal{
+    padding: 20px;
+    text-align: center;
+    h3{
+        margin: 20px 0;
+        font-weight: 500;
+        font-size: 1.2rem;
+
+    }
+    span{
+        border: 1px solid var(--text-gray);
+        color: var(--text-gray);
+        font-weight: 500;
+        background-color: white;
+        padding: 6px 18px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-right: 20px;
+        font-family: "Roboto",sans-serif;
+    }
+    button{
+        border: 1px solid var(--pink);
+        color: var(--pink);
+        font-weight: 500;
+        background-color: white;
+        padding: 6px 18px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        outline: none;
+        font-family: "Roboto",sans-serif;
+       
+    }
+}

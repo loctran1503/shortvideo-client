@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root {
+  --text: #333;
+  --background-login: #e8eff6;
+  --border-input: #dbdbdb;
+  --background-base: #fafafa;
+  --red: #fd6b68;
+  --facebook: #1278f3;
+  --text-gray: #75758a;
+  --green: #2bb32b;
+  --pink: #fc476b;
+  --border-gray: #dbdbdb;
+  --border-gray-less: #F2F2F2;
+  --text-green: #5a9e35;
+  --text-blue-less: #b1defc;
+  --text-blue: #1f9ef3;
+  --search-gray: #efefef;
+  --border-blue-less: #e2ecf5;
+
+  // Dimension
+  --margin-x: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.4rem;
+  box-sizing: border-box;
+  margin-top: 0;
+  font-size: 0.95rem;
+  
+  color: var(--text);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  // box-shadow: inset 0 0 2px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--text-blue);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-blue);
+}
+
+
+.label-custom{
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.input-custom{
+  outline: none;
+  border: 1px solid var(--border-gray);
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: 'Roboto',sans-serif;
+  color: #333;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 16px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.btn-custom{
+  outline: none;
+  border: none;
+  background-color: var(--pink);
+  color: white;
+  font-weight: 500;
+  border-radius: 50px;
+  font-family: 'Roboto',sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  cursor: pointer;
+}

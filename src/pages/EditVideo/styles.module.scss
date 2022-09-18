@@ -1,0 +1,30 @@
+.wrapper{
+    margin: 40px 12px 0;
+    h3{
+        text-align: center;
+        margin:30px 0 ;
+        font-weight: 500;
+        font-size: 1.5rem;
+
+    }
+
+    .btnSubmit{
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button{
+            cursor: pointer;
+            outline: none;
+            border: 1px solid var(--green);
+            color: var(--green);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-family: 500;
+            font-family: 'Roboto',sans-serif;
+            background-color: white;
+            font-size: 1.1rem;
+        }
+    }
+
+}
