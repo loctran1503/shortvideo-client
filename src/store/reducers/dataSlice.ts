@@ -67,7 +67,7 @@ const dataSlice = createSlice({
           state.topics = data.topics  
         }
         if(!data.success){
-          alert(data.message);
+          console.error(data.message)
         }
       });
        // Admin login
@@ -86,7 +86,7 @@ const dataSlice = createSlice({
           state.suggestCount = data.suggestCount || 0
         }
         if(!data.success){
-          alert(data.message);
+          console.error(data.message);
         }
         state.isLoading = false
       })
