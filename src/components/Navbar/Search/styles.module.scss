@@ -42,7 +42,7 @@
             .resultItem{
                 display: flex;
                 align-items: center;
-                padding: 0px 12px;
+                padding: 12px;
                 border-bottom: 1px solid var(--border-gray);
                 &:hover{
                     background-color: #fafafa;
@@ -58,9 +58,11 @@
                 }
                 cursor: pointer;
                 video{
+                  background-color: black;
                     width: 60px;
                     height: 60px;
-                    border-radius: 10px;
+                    object-fit: cover;
+                    border-radius: 4px;
                 }
                 .videoInfo{
                     font-family: 'Roboto',sans-serif;
