@@ -16,6 +16,7 @@ import { CreateSuggest, IResponse } from "../../utils/type";
 import { CREATE_SUGGEST } from "../../utils/url";
 import SearchVideo from "./Search/SearchVideo";
 import styles from "./styles.module.scss";
+import {isMobile,isTablet} from 'react-device-detect';
 const Navbar = () => {
   Modal.setAppElement("#root");
 const navigate = useNavigate()
@@ -25,9 +26,13 @@ const navigate = useNavigate()
     email: "",
   });
   const { topics,topicActied,isAdmin } = useAppSelector(dataSelector);
-  const [searchParams,setSeatchParams] = useSearchParams()
+  const [searchParams,setSeatchParams] = useSearchParams();
+  const [topicItemOnDevice,setTopicItemOnDevice] = useState(8);
   const dispatch = useAppDispatch()
-
+  useEffect(() =>{
+    if(isMobile) setTopicItemOnDevice(4);
+    if(isTablet) setTopicItemOnDevice(6)
+  },[])
 
   useEffect(() =>{
     const topic = searchParams.get('topic');
@@ -106,7 +111,7 @@ const navigate = useNavigate()
         <div className="row">
           <div className="col l-12 m-12 c-12">
             <div className={styles.categoryContainer}>
-              <Swiper spaceBetween={20} slidesPerView={8}>
+              <Swiper spaceBetween={20} slidesPerView={topicItemOnDevice}>
               <SwiperSlide  >
                       <p className={clsx(topicActied==="Tất cả" ? styles.textCategoryActived : styles.textCategory)} onClick={() =>{
                         navigate("/")
