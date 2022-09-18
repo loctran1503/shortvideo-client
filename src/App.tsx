@@ -6,21 +6,25 @@ import { privateRoutes, publicRoutes } from "./routers";
 import PrivateRoute from "./routers/PrivateRoute";
 import { useAppDispatch } from "./store/hooks";
 import { getAllTopic } from "./store/reducers/dataSlice";
-
+import {Helmet} from "react-helmet";
 function App() {
-  const dispatch = useAppDispatch()
-useEffect(() =>{
-  dispatch(getAllTopic())
-},[])
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(getAllTopic());
+  }, []);
 
   return (
     <>
+      <Helmet>
+        <title>GENTLEVN - Lưu trữ video ngắn</title>
+        <meta name="description" content="Nơi chứa những video ngắn , bạn có thể tải về và sử dụng" />
+      </Helmet>
       <BrowserRouter>
         <Routes>
           {publicRoutes.map((route, index) => {
             const Page = route.component;
             const Layout: ({
-              children
+              children,
             }: {
               children: ReactNode;
             }) => JSX.Element = route.layout || NoneLayout;
@@ -41,7 +45,7 @@ useEffect(() =>{
           {privateRoutes.map((route, index) => {
             const Page = route.component;
             const Layout: ({
-              children
+              children,
             }: {
               children: ReactNode;
             }) => JSX.Element = route.layout || NoneLayout;
