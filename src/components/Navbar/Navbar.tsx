@@ -1,12 +1,14 @@
-import {
-  faHouse, faXmark
-} from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
-import { createSearchParams, useNavigate, useSearchParams } from "react-router-dom";
+import {
+  createSearchParams,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { Swiper, SwiperSlide } from "swiper/react";
 import logo from "../../assets/gentlevn_logo.png";
@@ -16,32 +18,30 @@ import { CreateSuggest, IResponse } from "../../utils/type";
 import { CREATE_SUGGEST } from "../../utils/url";
 import SearchVideo from "./Search/SearchVideo";
 import styles from "./styles.module.scss";
-import {isMobile,isTablet} from 'react-device-detect';
+import { isMobile, isTablet } from "react-device-detect";
 const Navbar = () => {
   Modal.setAppElement("#root");
-const navigate = useNavigate()
+  const navigate = useNavigate();
   const [isSuggestModalOpen, setIsSuggestModalOpen] = useState(false);
   const [createSuggest, setCreateSuggest] = useState<CreateSuggest>({
     link: "",
     email: "",
   });
-  const { topics,topicActied,isAdmin } = useAppSelector(dataSelector);
-  const [searchParams,setSeatchParams] = useSearchParams();
-  const [topicItemOnDevice,setTopicItemOnDevice] = useState(8);
-  const dispatch = useAppDispatch()
-  useEffect(() =>{
-    if(isMobile) setTopicItemOnDevice(4);
-    if(isTablet) setTopicItemOnDevice(6)
-  },[])
+  const { topics, topicActied, isAdmin } = useAppSelector(dataSelector);
+  const [searchParams, setSeatchParams] = useSearchParams();
+  const [topicItemOnDevice, setTopicItemOnDevice] = useState(8);
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    if (isMobile) setTopicItemOnDevice(4);
+    if (isTablet) setTopicItemOnDevice(6);
+  }, []);
 
-  useEffect(() =>{
-    const topic = searchParams.get('topic');
-    if(topic){
-      dispatch(setTopicActived(topic))
+  useEffect(() => {
+    const topic = searchParams.get("topic");
+    if (topic) {
+      dispatch(setTopicActived(topic));
     }
-  },[searchParams,dispatch])
-
-
+  }, [searchParams, dispatch]);
 
   const openSuggestModal = () => {
     setIsSuggestModalOpen(true);
@@ -66,10 +66,10 @@ const navigate = useNavigate()
 
   const navigateWithSearchParams = (name: string) => {
     navigate({
-      pathname: '/',
+      pathname: "/",
       search: createSearchParams({
-        topic: name
-      }).toString()
+        topic: name,
+      }).toString(),
     });
   };
 
@@ -82,27 +82,35 @@ const navigate = useNavigate()
               <div className={styles.navbar}>
                 <img src={logo} alt="" />
                 <div className={styles.navbarCenter}>
-                <FontAwesomeIcon icon={faHouse} className={styles.navbarIcon} onClick={() =>{
-                        navigate("/")
-                        dispatch(setTopicActived("Tất cả"))
-                      }}/>
-                <SearchVideo/>
-                    {isAdmin && <button onClick={() =>navigate("/070699/admin/index")} className={styles.toAdmin}>Admin</button>}
-                
+                  <FontAwesomeIcon
+                    icon={faHouse}
+                    className={styles.navbarIcon}
+                    onClick={() => {
+                      navigate("/");
+                      dispatch(setTopicActived("Tất cả"));
+                    }}
+                  />
+                  <SearchVideo />
+                  {isAdmin && (
+                    <button
+                      onClick={() => navigate("/070699/admin/index")}
+                      className={styles.toAdmin}
+                    >
+                      Admin
+                    </button>
+                  )}
                 </div>
                 <div>
-                <h3
-                  className={clsx(styles.navbarLeftText, styles.suggestion)}
-                  onClick={openSuggestModal}
-                >
-                  Đề xuất
-                </h3>
+                  <h3
+                    className={clsx(styles.navbarLeftText, styles.suggestion)}
+                    onClick={openSuggestModal}
+                  >
+                    Đề xuất
+                  </h3>
                 </div>
-                
-                
               </div>
             </div>
-           
+
             {/* <div className="col l-2 m-2 c-2"></div> */}
           </div>
         </div>
@@ -110,7 +118,7 @@ const navigate = useNavigate()
       <div className="grid wide">
         <div className="row">
           <div className="col l-12 m-12 c-12">
-            <div className={styles.categoryContainer}>
+            {/* <div className={styles.categoryContainer}>
               <Swiper spaceBetween={20} slidesPerView={topicItemOnDevice}>
               <SwiperSlide  >
                       <p className={clsx(topicActied==="Tất cả" ? styles.textCategoryActived : styles.textCategory)} onClick={() =>{
@@ -129,6 +137,30 @@ const navigate = useNavigate()
                   );
                 })}
               </Swiper>
+            </div> */}
+            <div className={styles.topicContainer}>
+              <p
+                className={clsx(
+                  topicActied === "Tất cả"
+                    ? styles.textTopicActived
+                    : styles.textTopic
+                )}
+                onClick={() => {
+                  navigate("/");
+                  dispatch(setTopicActived("Tất cả"));
+                }}
+              >
+                Tất cả
+              </p>
+              {topics.map((item) => {
+                  return (
+                      <p key={item.topicId} className={clsx(topicActied===item.name ?styles.textTopicActived :styles.textTopic )} onClick={() =>{
+                        
+                        navigateWithSearchParams(item.name)
+                      }}>{item.name}</p>
+             
+                  );
+                })}
             </div>
           </div>
         </div>

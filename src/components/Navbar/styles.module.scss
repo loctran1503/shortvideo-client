@@ -10,7 +10,7 @@
 }
 .container{
     height: 68px;
-    margin-bottom: 12px;
+   
 }
 .navbar{
     margin: 0 12px;
@@ -55,10 +55,14 @@
 }
 
 // Category
-.categoryContainer{
-    height: 40px;
+.topicContainer{
+  
     margin-left: 12px;
-    .textCategory{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    .textTopic{
         text-align: center;
         border-radius: 20px;
        
@@ -68,11 +72,13 @@
         min-width: 100px;
         user-select: none;
         padding: 6px 12px;
+        margin-right: 12px;
         cursor: pointer;
     }
-    .textCategoryActived{
+    .textTopicActived{
         text-align: center;
         border-radius: 20px;
+        margin-right: 12px;
         background-color: #333;
         color: white;
         font-weight: 500;

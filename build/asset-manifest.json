@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.9b64e268.css",
-    "main.js": "/static/js/main.904a3abd.js",
+    "main.css": "/static/css/main.ecb7c1bd.css",
+    "main.js": "/static/js/main.4776df0d.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/gentlevn_logo.png": "/static/media/gentlevn_logo.a186ec2e1c52f90bce3e.png",
     "index.html": "/index.html",
-    "main.9b64e268.css.map": "/static/css/main.9b64e268.css.map",
-    "main.904a3abd.js.map": "/static/js/main.904a3abd.js.map",
+    "main.ecb7c1bd.css.map": "/static/css/main.ecb7c1bd.css.map",
+    "main.4776df0d.js.map": "/static/js/main.4776df0d.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b64e268.css",
-    "static/js/main.904a3abd.js"
+    "static/css/main.ecb7c1bd.css",
+    "static/js/main.4776df0d.js"
   ]
 }
