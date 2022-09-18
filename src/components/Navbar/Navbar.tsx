@@ -9,7 +9,7 @@ import Modal from "react-modal";
 import { createSearchParams, useNavigate, useSearchParams } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { Swiper, SwiperSlide } from "swiper/react";
-import logo from "../../assets/logo192.png";
+import logo from "../../assets/gentlevn_logo.png";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { dataSelector, setTopicActived } from "../../store/reducers/dataSlice";
 import { CreateSuggest, IResponse } from "../../utils/type";

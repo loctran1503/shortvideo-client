@@ -83,6 +83,7 @@ const VideoDetail = () => {
               {getVideo.video && (
                 <div className={styles.container}>
                   <h3 className={styles.videoTitle}>{getVideo.video.title}</h3>
+                  <p className={styles.videoSource}>Nguồn : <a>{getVideo.video.source}</a></p>
                   <div className={styles.downloader} > 
                     <a href={getVideo.video.url}  onClick={() =>{handleDownloadVideo()}}>Tải video</a>
                   </div>

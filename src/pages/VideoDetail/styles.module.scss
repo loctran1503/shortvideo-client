@@ -3,10 +3,25 @@
 }
 .container{
     .videoTitle{
-        margin-bottom: 20px;
+        margin-bottom: 6px;
         font-weight: 500;
         font-size: 1.1rem;
-        text-align: center;
+        
+    }
+    .videoSource{
+        font-size: 1rem;
+        a{
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--facebook);
+            margin-left: 4px;
+            cursor: pointer;
+            font-family: 'Roboto',sans-serif;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
     }
     video{
         width: 100%;
