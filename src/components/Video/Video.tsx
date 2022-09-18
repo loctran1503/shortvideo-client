@@ -52,8 +52,8 @@ const Video = () => {
         <>
           {videoLoadingList.map((item) => {
             return (
-              <div className="col l-3 m-4 c-12">
-                <Skeleton height={200} className={styles.loadingItem} />
+              <div className="col l-3 m-4 c-12" key={item}>
+                <Skeleton height={280} className={styles.loadingItem} />
               </div>
             );
           })}
